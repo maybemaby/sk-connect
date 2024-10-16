@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package proto.api.v1;
+
+option go_package = "github.com/maybemaby/sk-connect/gen/proto/api/v1;apiv1";
+
+message SampleRequest {
+  string name = 1;
+}
+
+message SampleResponse {
+  string message = 1;
+}
+
+service SampleService {
+  rpc SampleMethod(SampleRequest) returns (SampleResponse);
+}
